@@ -14,9 +14,13 @@ st.set_page_config(
 # -------------------------------------------------
 # Load Model
 # -------------------------------------------------
+import os
+
 @st.cache_resource
 def load_model():
-    return joblib.load("flight_price_xgboost.pkl")
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    model_path = os.path.join(base_dir, "flight_price_xgboost.pkl")
+    return joblib.load(model_path)
 
 model = load_model()
 
