@@ -1,4 +1,13 @@
+# Ignore everything by default
 *
+
+# Allow Git config
+!.gitignore
+
+# Allow SVM project
 !SVM/
 !SVM/**
-!.gitignore
+
+# Allow Flight Price Prediction project
+!Flight_Price_Prediction_RFR/
+!Flight_Price_Prediction_RFR/**
